@@ -21,7 +21,7 @@ export const getAllUser = async (req,res) => {
     try {
         // SELECT `id`, `username`, `statusOn`, `createdAt`, `updatedAt` FROM `Users` AS `User`;
         const users = await User.findAll();
-        return res.json({users});
+        return res.json({teste:users});
     } catch (error) {
         return res.status(400).json({messageError: error})
     }
