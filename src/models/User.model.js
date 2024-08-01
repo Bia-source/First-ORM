@@ -11,7 +11,7 @@ export const User = database.define('User',
     },
     username: {
       type: DataTypes.STRING(150),
-      allowNull: false
+      allowNull: false,
     },
     statusOn: {
       type: DataTypes.BOOLEAN,

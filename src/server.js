@@ -10,6 +10,7 @@ app.use(express.json());
 // dando acesso as nossas rotas
 app.use(userRouter);
 
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

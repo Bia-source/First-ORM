@@ -27,10 +27,27 @@ export const getAllUser = async (req,res) => {
     }
 }
 
-export const deleteUser = () => {
-
+export const deleteUser = async (req,res) => {
+    const { id } = req.params;
+    await User.destroy({
+        where: {
+          id
+        },
+      });
+    return res.json({message: 'usuario deletado com sucesso'})
 }
 
-export const updatedUser = () => {
-    
+export const updatedUser = async (req,res) => {
+    const { id } = req.params;
+    const { username } = req.body;
+    const { statusOn } = await User.findByPk(id);
+    await User.update(
+        { username, statusOn: !statusOn },
+        {
+          where: {
+            id
+          },
+        },
+      );
+    return res.json({message: 'usuario editado com sucesso'})
 }
