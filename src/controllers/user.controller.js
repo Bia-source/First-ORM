@@ -6,7 +6,7 @@ export const createUser = async (req, res) => {
         const { username } = req.body;
         // verificando se a tabela já existe
         // caso nao exista cria-se
-        await User.sync({force:true);
+        await User.sync({force:true});
         // criando uma variavel para armazenar a resposta 
         // da criacao do usuario no banco de dados
         //              aguarde/ acessando tabela 'User' / passando parametros de criacao
