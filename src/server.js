@@ -11,10 +11,6 @@ const port = 4000
 // google solicitar alguma rota do meu projeto
 // vai negado
 
-// teste git
-function teste(){
-  
-}
 // liberar todas as aplicacoes para acessar nossas rotas
 app.use(cors());
 
